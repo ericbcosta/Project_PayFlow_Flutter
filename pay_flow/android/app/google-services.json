@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "995177953545",
+    "project_id": "payflow-flutter-da2cd",
+    "storage_bucket": "payflow-flutter-da2cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995177953545:android:7f6ab88d522f0420fefbd8",
+        "android_client_info": {
+          "package_name": "com.example.pay_flow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995177953545-jt57n93no468hsffu02u9nqdiil3e4mk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pay_flow",
+            "certificate_hash": "89453537db8158b57f7a74f38c8d66536da23a53"
+          }
+        },
+        {
+          "client_id": "995177953545-243dvsphdqod3vhai02pkadl1dqirlji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDct1QuGSTOBQiZ839T3JOg26ScWP8RAnM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995177953545-243dvsphdqod3vhai02pkadl1dqirlji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995177953545:android:25a821889dff451ffefbd8",
+        "android_client_info": {
+          "package_name": "com.example.pay_flow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995177953545-243dvsphdqod3vhai02pkadl1dqirlji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDct1QuGSTOBQiZ839T3JOg26ScWP8RAnM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995177953545-243dvsphdqod3vhai02pkadl1dqirlji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
