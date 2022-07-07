@@ -1,11 +1,20 @@
 import 'package:flutter/Material.dart';
+import 'package:flutter/services.dart';
+import 'package:pay_flow/modules/barcode_scanner/barcode_scanner_page.dart';
 import 'package:pay_flow/modules/home/home_page.dart';
 import 'package:pay_flow/modules/splash/splash_page.dart';
 import 'shared/themes/app_colors.dart';
 import 'modules/login/login_page.dart';
 
 class AppWidget extends StatelessWidget {
-  const AppWidget({Key? key}) : super(key: key);
+  AppWidget({Key? key}) : super(key: key) {
+    SystemChrome.setPreferredOrientations(
+      [
+        DeviceOrientation.portraitDown,
+        DeviceOrientation.portraitUp,
+      ],
+    );
+  }
 
   // This widget is the root of your application.
   @override
@@ -13,13 +22,15 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       title: 'Pay Flow',
       theme: ThemeData(
+        primarySwatch: Colors.orange,
         primaryColor: AppColors.primary,
       ),
       initialRoute: "/splash",
       routes: {
         "/splash": (context) => const SplashPage(),
         "/home": (context) => const HomePage(),
-        "/login": (context) => const LoginPage()
+        "/login": (context) => const LoginPage(),
+        "/barcode_scanner": (context) => const BarcodeScannerPage()
       },
       debugShowCheckedModeBanner: false,
     );
