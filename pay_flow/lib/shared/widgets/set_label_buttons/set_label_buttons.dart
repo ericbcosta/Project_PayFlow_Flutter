@@ -1,4 +1,5 @@
 import 'package:flutter/Material.dart';
+import 'package:pay_flow/shared/themes/app_colors.dart';
 import 'package:pay_flow/shared/themes/app_text_styles.dart';
 import '../divider_vertical/divider_vertical_widget.dart';
 import '../label_button/label_button.dart';
@@ -9,6 +10,7 @@ class SetLabelButtons extends StatelessWidget {
   final String secondaryLabel;
   final VoidCallback secondaryOnPressed;
   final bool enablePrimaryColor;
+  final bool enableSecondaryColor;
   const SetLabelButtons({
     Key? key,
     required this.primaryLabel,
@@ -16,26 +18,42 @@ class SetLabelButtons extends StatelessWidget {
     required this.secondaryLabel,
     required this.secondaryOnPressed,
     this.enablePrimaryColor = false,
+    this.enableSecondaryColor = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 56,
-      child: Row(
+      height: 57,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Expanded(
-            child: LabelButton(
-              label: primaryLabel,
-              onPressed: primaryOnPressed,
-              style: enablePrimaryColor ? TextStyles.buttonPrimary : null,
-            ),
+          Divider(
+            height: 1,
+            thickness: 1,
+            color: AppColors.stroke,
           ),
-          const DividerVerticalWidget(),
-          Expanded(
-            child: LabelButton(
-              label: secondaryLabel,
-              onPressed: secondaryOnPressed,
+          Container(
+            height: 56,
+            child: Row(
+              children: [
+                Expanded(
+                  child: LabelButton(
+                    label: primaryLabel,
+                    onPressed: primaryOnPressed,
+                    style: enablePrimaryColor ? TextStyles.buttonPrimary : null,
+                  ),
+                ),
+                const DividerVerticalWidget(),
+                Expanded(
+                  child: LabelButton(
+                    label: secondaryLabel,
+                    onPressed: secondaryOnPressed,
+                    style:
+                        enableSecondaryColor ? TextStyles.buttonPrimary : null,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
