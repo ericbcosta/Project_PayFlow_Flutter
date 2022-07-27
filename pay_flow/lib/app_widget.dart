@@ -4,6 +4,7 @@ import 'package:pay_flow/modules/barcode_scanner/barcode_scanner_page.dart';
 import 'package:pay_flow/modules/home/home_page.dart';
 import 'package:pay_flow/modules/insert_boleto/insert_boleto_page.dart';
 import 'package:pay_flow/modules/splash/splash_page.dart';
+import 'package:pay_flow/shared/models/user_model.dart';
 import 'shared/themes/app_colors.dart';
 import 'modules/login/login_page.dart';
 
@@ -29,7 +30,9 @@ class AppWidget extends StatelessWidget {
       initialRoute: "/splash",
       routes: {
         "/splash": (context) => const SplashPage(),
-        "/home": (context) => const HomePage(),
+        "/home": (context) => HomePage(
+              user: ModalRoute.of(context)!.settings.arguments as UserModel,
+            ),
         "/login": (context) => const LoginPage(),
         "/barcode_scanner": (context) => const BarcodeScannerPage(),
         "/insert_boleto": (context) => const InsertBoeltoPage()
